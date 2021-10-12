@@ -27,6 +27,7 @@ def stochastic_gradient_descent(
     """Stochastic gradient descent algorithm."""
 
     losses = []
+    ws = []
     w = initial_w
     for batch_y, batch_tx in batch_iter(y, tx, batch_size, num_batches=max_iters):
         loss = compute_loss(batch_y, batch_tx, w)
